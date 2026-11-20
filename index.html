@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Demo — Tool AI Nhân sự + Video AI + Lịch đăng bài</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;background:#F0F2F5;color:#14213d;padding:16px;touch-action:manipulation}
+.wrap{max-width:1100px;margin:0 auto}
+.hero{background:#0A1A3C;color:#fff;border-radius:20px;padding:24px 20px;margin-bottom:16px}
+.hero h1{font-size:24px;line-height:1.25;margin-bottom:8px}
+.hero h1 span{color:#FF7A1A}
+.hero p{opacity:.92;font-size:14px;line-height:1.55}
+.badge{display:inline-block;background:#FF7A1A;color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:860px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(10,26,60,.08)}
+.card h2{font-size:17px;margin-bottom:8px;color:#0A1A3C}
+.card p,.card li{font-size:13.5px;line-height:1.55;color:#334}
+.card ul{margin:8px 0 12px 18px}
+.btn{display:inline-block;background:#FF7A1A;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 16px;border-radius:12px;border:0;cursor:pointer;width:100%;text-align:center}
+.btn.navy{background:#0A1A3C}
+.btn.ghost{background:#fff;color:#0A1A3C;border:1.5px solid #0A1A3C}
+.note{font-size:12px;color:#667;margin-top:10px;line-height:1.5}
+.section{background:#fff;border-radius:16px;padding:18px;margin-top:16px;box-shadow:0 2px 10px rgba(10,26,60,.08)}
+.section h2{font-size:18px;color:#0A1A3C;margin-bottom:6px}
+.section p{font-size:13.5px;line-height:1.55;color:#334}
+label{font-size:13px;font-weight:700;display:block;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:11px;border:1.5px solid #d7dce6;border-radius:10px;font-size:14px;font-family:inherit}
+textarea{min-height:74px;resize:vertical}
+.out{background:#FFF4EC;border:1.5px dashed #FF7A1A;border-radius:12px;padding:14px;margin-top:14px;font-size:13.5px;line-height:1.65;white-space:pre-wrap;display:none}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
+th,td{border:1px solid #e3e7ef;padding:8px;text-align:left;vertical-align:top}
+th{background:#0A1A3C;color:#fff}
+.tag{display:inline-block;background:#FFE3D1;color:#8a3c00;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+@media(min-width:860px){.kpi{grid-template-columns:repeat(4,1fr)}}
+.kpi div{background:#F0F2F5;border-radius:12px;padding:12px}
+.kpi b{font-size:20px;color:#0A1A3C;display:block}
+.kpi span{font-size:12px;color:#556}
+footer{font-size:12px;color:#778;text-align:center;padding:18px 6px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <span class="badge">BẢN DEMO — DỮ LIỆU MẪU</span>
+    <h1>Hệ thống AI hỗ trợ <span>Quản trị nhân sự</span> + <span>Tạo video</span> + <span>Lên lịch đăng bài</span></h1>
+    <p>Demo gồm 3 phần làm được ngay: (1) tool nhân sự đã có bản chạy thật, (2) studio soạn kịch bản video AI ngay trên trang này, (3) lịch đăng bài theo tuần cho Facebook / TikTok / YouTube Shorts / Zalo. Phần đăng bài chạy qua công cụ lên lịch chính thức — cần chủ tài khoản cấp quyền, không cần đưa mật khẩu.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>1. Tool Quản trị nhân sự</h2>
+      <p>Bản chạy thật, bấm vào là dùng thử được:</p>
+      <ul>
+        <li>Danh sách nhân viên, phòng ban</li>
+        <li>Bảng công, bảng lương, phiếu lương in hàng loạt</li>
+        <li>BHXH, hợp đồng lao động, quyết định</li>
+        <li>Thuế TNCN 05/KK + 05/QTT, xuất file MISA</li>
+      </ul>
+      <a class="btn" href="https://hanglex9x-cmyk.github.io/tool-luong-all-in-one/" target="_blank" rel="noopener">Mở tool nhân sự thật</a>
+      <p class="note">Dữ liệu trong bản demo là dữ liệu mẫu của công ty bịa KALUNA. Khi làm cho đơn vị thật, dữ liệu sẽ thay bằng dữ liệu của đơn vị và chạy trên tài khoản Google của chính đơn vị.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. AI tạo video</h2>
+      <p>Quy trình làm video ngắn:</p>
+      <ul>
+        <li>Nhập chủ đề / sản phẩm ở mục Studio bên dưới</li>
+        <li>Hệ thống soạn kịch bản 30–45 giây + chữ chạy trên màn hình</li>
+        <li>Dựng video AI + giọng đọc theo kịch bản đã duyệt</li>
+        <li>Khách duyệt video trước khi đăng</li>
+      </ul>
+      <a class="btn navy" href="#studio">Thử Studio soạn kịch bản</a>
+      <p class="note">Video mẫu theo đúng ngành của khách sẽ được làm sau khi khách gửi thông tin sản phẩm/dịch vụ — demo này chưa gắn video mẫu của ngành khác để tránh lệch nhu cầu.</p>
+    </div>
+
+    <div class="card">
+      <h2>3. Đăng bài trên các nền tảng</h2>
+      <p>Lên lịch theo tuần, đăng qua công cụ lên lịch chính thức:</p>
+      <ul>
+        <li>Facebook, TikTok, YouTube Shorts, Zalo</li>
+        <li>Nội dung soạn 1 lần, chỉnh lại cho từng nền tảng</li>
+        <li>Trạng thái rõ: Chờ duyệt → Đã lên lịch → Đã đăng</li>
+        <li>Khách chỉ cần duyệt nội dung, không đưa mật khẩu</li>
+      </ul>
+      <a class="btn ghost" href="#lich">Xem lịch đăng mẫu 1 tuần</a>
+      <p class="note">Nói thẳng phần giới hạn: nền tảng nào không cho đăng tự động bằng tài khoản chính chủ thì sẽ ở dạng “đã soạn sẵn + lên lịch”, bước đăng cuối do chủ tài khoản xác nhận.</p>
+    </div>
+  </div>
+
+  <div class="section" id="studio">
+    <h2>Studio — thử soạn kịch bản video + caption ngay</h2>
+    <p>Điền thử 1 chủ đề bất kỳ, hệ thống sẽ soạn ngay kịch bản mẫu, caption và lịch đăng gợi ý. Đây là bản demo chạy ngay trên trình duyệt.</p>
+    <label>Chủ đề / sản phẩm / dịch vụ</label>
+    <input id="topic" placeholder="Ví dụ: khóa học tiếng Anh online 1-1 cho trẻ em">
+    <label>Điểm mạnh muốn nhấn</label>
+    <input id="usp" placeholder="Ví dụ: học với giáo viên nước ngoài, lịch linh hoạt, học phí theo tháng">
+    <label>Khách hàng hướng tới</label>
+    <input id="aud" placeholder="Ví dụ: phụ huynh có con 6–12 tuổi">
+    <div style="margin-top:14px"><button class="btn" onclick="gen()">Soạn kịch bản + caption</button></div>
+    <div class="out" id="out"></div>
+  </div>
+
+  <div class="section" id="lich">
+    <h2>Lịch đăng mẫu 1 tuần</h2>
+    <div class="kpi">
+      <div><b>5</b><span>bài / tuần</span></div>
+      <div><b>4</b><span>nền tảng</span></div>
+      <div><b>3</b><span>video ngắn / tuần</span></div>
+      <div><b>1</b><span>lần duyệt nội dung / tuần</span></div>
+    </div>
+    <table>
+      <tr><th>Ngày</th><th>Nội dung</th><th>Nền tảng</th><th>Trạng thái</th></tr>
+      <tr><td>Thứ 2</td><td>Video giới thiệu dịch vụ</td><td>Facebook · TikTok · Shorts</td><td><span class="tag">Chờ duyệt</span></td></tr>
+      <tr><td>Thứ 3</td><td>Bài chia sẻ kiến thức / mẹo</td><td>Facebook · Zalo</td><td><span class="tag">Chờ duyệt</span></td></tr>
+      <tr><td>Thứ 4</td><td>Video trả lời câu hỏi thường gặp</td><td>TikTok · Shorts</td><td><span class="tag">Chờ duyệt</span></td></tr>
+      <tr><td>Thứ 6</td><td>Video feedback / hậu trường</td><td>Facebook · TikTok</td><td><span class="tag">Chờ duyệt</span></td></tr>
+      <tr><td>Thứ 7</td><td>Bài nhắc lịch / ưu đãi (nếu có)</td><td>Facebook · Zalo</td><td><span class="tag">Chờ duyệt</span></td></tr>
+    </table>
+    <p class="note">Lịch, số bài và nền tảng sẽ chỉnh lại theo đúng ngành và thói quen của từng đơn vị sau khi trao đổi.</p>
+  </div>
+
+  <footer>Bản demo do Trạm Freelance thực hiện — dữ liệu mẫu, không phải dữ liệu của doanh nghiệp thật.<br>Trao đổi thêm qua tin nhắn để chốt phạm vi làm thật.</footer>
+</div>
+<script>
+function gen(){
+  var t=(document.getElementById('topic').value||'sản phẩm/dịch vụ của bạn').trim();
+  var u=(document.getElementById('usp').value||'chất lượng rõ ràng, tư vấn tận tâm').trim();
+  var a=(document.getElementById('aud').value||'khách hàng đang quan tâm').trim();
+  var s='KỊCH BẢN VIDEO 30–45 GIÂY\n'
+    +'0–3s (Hook): "Bạn đang tìm '+t+' mà chưa biết bắt đầu từ đâu?"\n'
+    +'3–20s: Giới thiệu '+t+' — điểm mạnh: '+u+'.\n'
+    +'20–35s: Vì sao phù hợp với '+a+': nói đúng 1 lợi ích cụ thể + 1 hình ảnh minh họa.\n'
+    +'35–45s (Kêu gọi): "Quan tâm thì nhắn tin để được tư vấn chi tiết nhé!"\n'
+    +'Chữ trên màn hình: '+t+' • '+u+'\n\n'
+    +'CAPTION ĐĂNG BÀI\n'
+    +'Bạn đang cần '+t+'?\nĐiểm mạnh bên mình: '+u+'.\nDành cho: '+a+'.\nNhắn tin để được tư vấn chi tiết ạ!\n'
+    +'#videoAI #truyenthong #doanhnghiep\n\n'
+    +'LỊCH ĐĂNG GỢI Ý: Thứ 2 đăng Facebook + TikTok + Shorts, Thứ 3 đăng lại bản caption dài lên Zalo.';
+  var o=document.getElementById('out'); o.textContent=s; o.style.display='block'; o.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>
